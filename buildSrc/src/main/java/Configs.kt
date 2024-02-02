@@ -6,6 +6,6 @@ object Configs {
     const val compileSdk = 34
     const val targetSdk = 34
     const val versionCode = 1
-    const val versionName = "24.01.31.0001"
+    const val versionName = "24.02.02.0001"
     val javaVersion = JavaVersion.VERSION_17
 }
