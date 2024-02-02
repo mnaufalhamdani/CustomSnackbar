@@ -1,7 +1,7 @@
 import org.gradle.api.JavaVersion
 
 object Configs {
-    const val applicationId = "com.mnaufalhamdani.customsnackbarcompose"
+    const val applicationId = "com.mnaufalhamdani.customsnackbar"
     const val minSdk = 21
     const val compileSdk = 34
     const val targetSdk = 34

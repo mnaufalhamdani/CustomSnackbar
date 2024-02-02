@@ -28,7 +28,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.mnaufalhamdani.customsnackbar.ui.theme.CustomSnackbarTheme
 import com.mnaufalhamdani.customsnackbarcompose.CustomSnackbarCompose
-import com.mnaufalhamdani.customsnackbarcompose.R
 import com.mnaufalhamdani.customsnackbarcompose.TypeMessage
 import com.mnaufalhamdani.customsnackbarcompose.stateOfCustomSnackbar
 import kotlinx.coroutines.launch
@@ -67,12 +66,12 @@ class MainActivity : ComponentActivity() {
                         getString(R.string.app_name),
                         color = Color.Black,
                         fontSize = 20.sp,
-                        fontFamily = FontFamily(Font(R.font.nunitosans_bold)),
+                        fontFamily = FontFamily(Font(com.mnaufalhamdani.customsnackbarcompose.R.font.nunitosans_bold)),
                     )
                 }
 
                 Button(
-                    colors = ButtonDefaults.buttonColors(colorResource(R.color.green_A700)),
+                    colors = ButtonDefaults.buttonColors(colorResource(com.mnaufalhamdani.customsnackbarcompose.R.color.green_A700)),
                     modifier = Modifier
                         .padding(top = 10.dp, start = 10.dp, end = 10.dp)
                         .fillMaxWidth(),
@@ -92,7 +91,7 @@ class MainActivity : ComponentActivity() {
                 }
 
                 Button(
-                    colors = ButtonDefaults.buttonColors(colorResource(R.color.blue_A700)),
+                    colors = ButtonDefaults.buttonColors(colorResource(com.mnaufalhamdani.customsnackbarcompose.R.color.blue_A700)),
                     modifier = Modifier
                         .padding(top = 10.dp, start = 10.dp, end = 10.dp)
                         .fillMaxWidth(),
@@ -108,7 +107,7 @@ class MainActivity : ComponentActivity() {
                 }
 
                 Button(
-                    colors = ButtonDefaults.buttonColors(colorResource(R.color.amber_A700)),
+                    colors = ButtonDefaults.buttonColors(colorResource(com.mnaufalhamdani.customsnackbarcompose.R.color.amber_A700)),
                     modifier = Modifier
                         .padding(top = 10.dp, start = 10.dp, end = 10.dp)
                         .fillMaxWidth(),
@@ -124,7 +123,7 @@ class MainActivity : ComponentActivity() {
                 }
 
                 Button(
-                    colors = ButtonDefaults.buttonColors(colorResource(R.color.red_A700)),
+                    colors = ButtonDefaults.buttonColors(colorResource(com.mnaufalhamdani.customsnackbarcompose.R.color.red_A700)),
                     modifier = Modifier
                         .padding(top = 10.dp, start = 10.dp, end = 10.dp)
                         .fillMaxWidth(),

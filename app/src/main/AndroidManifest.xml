@@ -13,7 +13,7 @@
         android:theme="@style/Theme.CustomSnackbar"
         tools:targetApi="31">
         <activity
-            android:name="com.mnaufalhamdani.customsnackbar.MainActivity"
+            android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/Theme.CustomSnackbar">
             <intent-filter>
