@@ -49,7 +49,7 @@ class CustomSnackbar(
         val snackView = LayoutInflater.from(view.context).inflate(R.layout.custom_snackbar_message, null)
         snackView.findViewById<TextView>(R.id.message).text = message
 
-        snackView.findViewById<ImageView>(R.id.icon).load(drawableId)
+        snackView.findViewById<ImageView>(R.id.icon).load(drawableId, imageLoader = loaderOfImage(view.context))
 
         actionText?.let {
             snackView.findViewById<Button>(R.id.action).apply {
