@@ -10,9 +10,10 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven("https://jitpack.io")
     }
 }
 
 rootProject.name = "CustomSnackbar"
 include(":app")
-include(":customsnackbarcompose")
+include(":customsnackbar")
