@@ -9,7 +9,9 @@ import android.widget.Button
 import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import coil.load
+import com.google.android.material.card.MaterialCardView
 import com.google.android.material.snackbar.Snackbar
 
 enum class TypeMessage {
@@ -25,7 +27,7 @@ class CustomSnackbar(
 ) {
     private lateinit var snackbar: Snackbar
 
-    @SuppressLint("RestrictedApi")
+    @SuppressLint("RestrictedApi", "InflateParams")
     fun show(actionText: String? = null, action: ((Snackbar) -> Unit?)? = null) {
         dismiss()
 
@@ -34,6 +36,13 @@ class CustomSnackbar(
             TypeMessage.INFO    -> R.drawable.img_anim_info
             TypeMessage.WARNING -> R.drawable.img_anim_warning
             TypeMessage.ERROR   -> R.drawable.img_anim_error
+        }
+
+        val colorId = when(typeMessage) {
+            TypeMessage.SUCCESS -> R.color.green_A700
+            TypeMessage.INFO    -> R.color.blue_A700
+            TypeMessage.WARNING -> R.color.amber_A700
+            TypeMessage.ERROR   -> R.color.red_A700
         }
 
         snackbar = Snackbar.make(view, "", duration)
@@ -47,6 +56,12 @@ class CustomSnackbar(
         snackbar.view.layoutParams = params
 
         val snackView = LayoutInflater.from(view.context).inflate(R.layout.custom_snackbar_message, null)
+        snackView.findViewById<MaterialCardView>(R.id.card).apply {
+            strokeColor = ContextCompat.getColor(view.context, colorId)
+        }
+        snackView.findViewById<ImageView>(R.id.btn_close).setOnClickListener {
+            dismiss()
+        }
         snackView.findViewById<TextView>(R.id.message).text = message
 
         snackView.findViewById<ImageView>(R.id.icon).load(drawableId, imageLoader = loaderOfImage(view.context))
